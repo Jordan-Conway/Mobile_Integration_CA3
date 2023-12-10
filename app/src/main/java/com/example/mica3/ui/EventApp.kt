@@ -9,5 +9,5 @@ import com.example.mica3.ui.screens.EventViewModel
 fun EventApp()
 {
     val eventViewModel: EventViewModel = viewModel(factory = EventViewModel.Factory)
-    EventScreen(uiState = eventViewModel.eventUIState)
+    EventScreen(eventViewModel = eventViewModel)
 }

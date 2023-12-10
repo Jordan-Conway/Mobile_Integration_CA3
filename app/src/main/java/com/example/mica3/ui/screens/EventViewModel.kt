@@ -25,7 +25,9 @@ sealed interface EventUIState
     object Loading: EventUIState
 }
 
-class EventViewModel(private val eventRepositroy: EventRepository): ViewModel()
+class EventViewModel(
+    private val eventRepositroy: EventRepository,
+): ViewModel()
 {
     var eventUIState: EventUIState by mutableStateOf(EventUIState.Loading)
         private set
